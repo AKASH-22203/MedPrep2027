@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* MedPrep global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+}
