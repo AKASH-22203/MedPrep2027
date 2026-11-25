@@ -4,7 +4,6 @@ import {
   BookOpen,
   ClipboardList,
   FileText,
-  Search,
   Stethoscope,
   Target,
   Trophy,

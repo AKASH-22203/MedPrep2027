@@ -1,5 +1,7 @@
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  "http://localhost:5000/api";
 
 export interface DriveFile {
   id: string;
@@ -34,6 +36,11 @@ interface SubjectsResponse {
 }
 
 interface SubjectFilesResponse {
+  success: boolean;
+  files: DriveFile[];
+}
+
+interface NotesResponse {
   success: boolean;
   files: DriveFile[];
 }
@@ -78,6 +85,12 @@ export async function getSubjectFiles(
   return data.files;
 }
 
+// Notes API
+export async function getNotesFiles(): Promise<DriveFile[]> {
+  const data = await fetchAPI<NotesResponse>("/resources/notes");
+  return data.files;
+}
+
 // PDF APIs
 export function getPDFViewUrl(fileId: string): string {
   return `${API_BASE_URL}/files/${encodeURIComponent(fileId)}`;
@@ -85,15 +98,4 @@ export function getPDFViewUrl(fileId: string): string {
 
 export function getPDFDownloadUrl(fileId: string): string {
   return `${API_BASE_URL}/files/${encodeURIComponent(fileId)}?download=true`;
-}
-
-
-interface NotesResponse {
-  success: boolean;
-  files: DriveFile[];
-}
-
-export async function getNotesFiles(): Promise<DriveFile[]> {
-  const data = await fetchAPI<NotesResponse>("/resources/notes");
-  return data.files;
 }

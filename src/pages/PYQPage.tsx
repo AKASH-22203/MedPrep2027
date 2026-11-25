@@ -71,7 +71,7 @@ export default function PYQPage() {
     setError("");
   }
 
-  function formatFileSize(size?: string) {
+  function formatFileSize(size?: string | null | undefined) {
     if (!size || !Number.isFinite(Number(size))) return "";
 
     const sizeInMB = Number(size) / (1024 * 1024);
