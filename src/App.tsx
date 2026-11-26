@@ -377,7 +377,7 @@ function App() {
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-slate-950 text-slate-300">
         <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
 
             {/* Brand & About */}
             <div className="lg:col-span-2">
@@ -501,6 +501,77 @@ function App() {
                 </a>
               </div>
             </div>
+            {/* Student Feedback */}
+<div>
+  <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-white">
+    Share Your Feedback
+  </h3>
+
+  <p className="mb-5 text-sm leading-6 text-slate-400">
+    Help us improve MedPrep 2027. Share your suggestions, report issues
+    or tell us about your experience.
+  </p>
+
+  <form
+    action="https://formspree.io/f/xppdbbnd"
+    method="POST"
+    className="space-y-3"
+  >
+    <input
+      type="hidden"
+      name="_subject"
+      value="New MedPrep 2027 Student Feedback"
+    />
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your name (optional)"
+      className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-teal-400"
+    />
+
+    <input
+      type="email"
+      name="_replyto"
+      placeholder="Your email (optional)"
+      className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-teal-400"
+    />
+
+    <select
+      name="feedback_type"
+      required
+      defaultValue=""
+      className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-slate-300 outline-none focus:border-teal-400"
+    >
+      <option value="" disabled>
+        Select feedback type
+      </option>
+      <option value="Suggestion">Suggestion</option>
+      <option value="Bug Report">Bug Report</option>
+      <option value="Review">Review</option>
+      <option value="New Idea">New Idea</option>
+    </select>
+
+    <textarea
+      name="message"
+      required
+      rows={4}
+      placeholder="Write your feedback here..."
+      className="w-full resize-y rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-teal-400"
+    />
+
+    <button
+      type="submit"
+      className="w-full rounded-lg bg-teal-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-400"
+    >
+      Submit Feedback →
+    </button>
+  </form>
+
+  <p className="mt-3 text-xs text-slate-500">
+    Your feedback helps us make MedPrep better for everyone.
+  </p>
+</div>
           </div>
 
           {/* Bottom Bar */}
