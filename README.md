@@ -57,7 +57,7 @@ MedPrep2027/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/AKASH-22203/MedPrep2027.git
 cd MedPrep2027
 ```
 
