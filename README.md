@@ -1,34 +1,50 @@
-
 # MedPrep 2027
 
-A web-based medical PG preparation platform that provides students with easy access to Previous Year Questions (PYQs), subject-wise questions, and study notes.
+**A centralized medical PG preparation platform for Previous Year Questions, subject-wise practice, and study resources.**
+
+MedPrep 2027 helps medical PG aspirants access previous year question papers, practise subject-wise questions, and study from organized notes and PDF resources in one place.
+
+## Live Website
+
+🌐 **[MedPrep 2027](https://med-prep2027.vercel.app/)**
+
+💻 **[GitHub Repository](https://github.com/AKASH-22203/MedPrep2027)**
 
 ## Features
 
-- **Previous Year Questions:** Browse available question papers by year.
-- **Subject-wise Questions:** Explore questions across 19 medical subjects.
+- **Previous Year Questions (PYQs):** Browse available question papers organized by year.
+- **Subject-wise Questions:** Access question collections across 19 medical subjects.
+- **Practice Quiz:** Practise questions through the subject-wise quiz interface.
 - **Study Notes:** Browse and search available study materials.
 - **PDF Viewer:** View and download study resources.
-- **Practice Quiz:** Coming Soon.
+- **Secure Resource Access:** Access privately stored Google Drive resources through the backend.
 
 ## Tech Stack
 
 ### Frontend
+
 - React
 - TypeScript
 - Vite
 - React Router
-- CSS
+- Tailwind CSS
 - Lucide React
 
 ### Backend
+
 - Node.js
 - Express.js
 - Google Drive API
 - Google Service Account
 
 ### Storage
+
 - Google Drive (private resource storage)
+
+### Deployment
+
+- Vercel – Frontend
+- Render – Backend
 
 ## Project Structure
 
@@ -54,6 +70,12 @@ MedPrep2027/
 
 ## Run Locally
 
+### Prerequisites
+
+- Node.js
+- npm
+- Google Cloud service account credentials for backend resource access
+
 ### 1. Clone the repository
 
 ```bash
@@ -73,7 +95,13 @@ npm install
 npm run dev
 ```
 
-### 4. Start the backend
+The frontend will run at:
+
+```text
+http://localhost:5173
+```
+
+### 4. Configure and start the backend
 
 Open another terminal:
 
@@ -83,29 +111,30 @@ npm install
 npm run dev
 ```
 
-Configure the backend environment variables and Google service account credentials before starting the backend.
+Configure the required backend environment variables and Google service account credentials before starting the backend.
 
 ## Security
 
-- Google Drive resources remain private.
-- Backend accesses files using a Google service account.
-- Credentials and environment files must never be committed to GitHub.
+- Study resources are stored privately in Google Drive.
+- The backend uses a Google service account to access protected resources.
+- Sensitive credentials are kept outside the frontend source code.
+- Environment files and service account credentials must never be committed to GitHub.
 
 ## Future Enhancements
 
 - Student registration and login
 - Google authentication
-- Student dashboard
+- Personalized student dashboard
 - Bookmarks and progress tracking
 - Admin dashboard and content management
-- Practice Quiz module
+- Enhanced quiz performance analytics
 
 ## Project Status
 
 **Version:** 1.0
 
-**Status:** Initial release preparation
+**Status:** Live – Actively Developing
 
 ---
 
-Built to make medical PG preparation resources easier to access.
+Built to make medical PG preparation resources easier to access and practise.
