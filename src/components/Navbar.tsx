@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import {
   Menu,
   X,
+  Brain,
   BookOpen,
   Home,
   FileText,
@@ -17,6 +18,7 @@ const navigation = [
   { name: "Home", path: "/", icon: Home, type: "page" },
   { name: "Resources", path: "/#resources", icon: Layers, type: "anchor" },
   { name: "Subjects", path: "/subjects", icon: BookOpen, type: "page" },
+  { name: "Quiz", path: "/quiz", icon: Brain, type: "page" },
   { name: "PYQs", path: "/pyqs", icon: FileText, type: "page" },
   { name: "Notes", path: "/notes", icon: NotebookText, type: "page" },
   { name: "About", path: "/#about", icon: Info, type: "anchor" },

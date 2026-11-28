@@ -5,6 +5,7 @@ import {
   BookOpen,
   Download,
   FileText,
+  Brain,
   Loader2,
   FolderOpen,
 } from "lucide-react";
@@ -23,6 +24,7 @@ export default function SubjectDetailPage() {
   const [files, setFiles] = useState<DriveFile[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [quizAvailable, setQuizAvailable] = useState(false);
 
   useEffect(() => {
     async function loadFiles() {
@@ -47,6 +49,41 @@ export default function SubjectDetailPage() {
 
     loadFiles();
   }, [slug]);
+
+  useEffect(() => {
+  let active = true;
+
+  async function checkQuizAvailability() {
+    if (!slug) return;
+
+    try {
+      const response = await fetch(
+        `/data/quiz/questions/${slug}.json`
+      );
+
+      if (!response.ok) {
+        if (active) setQuizAvailable(false);
+        return;
+      }
+
+      const bank = await response.json();
+
+      if (active) {
+        setQuizAvailable(
+          Array.isArray(bank.questions) && bank.questions.length > 0
+        );
+      }
+    } catch {
+      if (active) setQuizAvailable(false);
+    }
+  }
+
+  checkQuizAvailability();
+
+  return () => {
+    active = false;
+  };
+}, [slug]);
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -78,6 +115,16 @@ export default function SubjectDetailPage() {
                 Access and practice question papers organized for this medical
                 subject. Select any PDF to study or download it for later.
               </p>
+              {quizAvailable && (
+  <Link
+    to={`/quiz/${slug}?mode=practice`}
+    className="mt-6 inline-flex items-center gap-2 rounded-xl bg-teal-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
+  >
+    <Brain size={18} />
+    Practice Questions
+    <ArrowLeft size={15} className="rotate-180" />
+  </Link>
+)}
             </div>
 
             <div className="hidden rounded-2xl bg-teal-50 p-5 text-teal-700 sm:block">

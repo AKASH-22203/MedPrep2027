@@ -65,9 +65,9 @@ const resources = [
     title: "Practice Quiz",
     description: "Test your knowledge with MCQs and explanations.",
     icon: ClipboardList,
-    href: "#",
+    href: "/quiz",
     number: "04",
-    available: false,
+    available: true,
   },
 ];
 
@@ -268,7 +268,11 @@ function App() {
                   ) : (
                     <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-700">
                       <Clock size={14} />
-                      Coming Soon
+                      Explore
+                      <ArrowRight
+                        size={16}
+                        className="transition group-hover:translate-x-1"
+                      />
                     </div>
                   )}
                 </>

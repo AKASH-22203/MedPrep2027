@@ -8,6 +8,8 @@ import SubjectsPage from "./pages/SubjectsPage";
 import SubjectDetailPage from "./pages/SubjectDetailPage";
 import PYQPage from "./pages/PYQPage";
 import NotesPage from "./pages/NotesPage";
+import QuizPage from "./pages/QuizPage";
+import QuizSessionPage from "./pages/QuizSessionPage";
 
 function MainLayout() {
   return (
@@ -52,6 +54,8 @@ function AppRouter() {
           <Route path="/subjects/:slug" element={<SubjectDetailPage />} />
           <Route path="/pyqs" element={<PYQPage />} />
           <Route path="/notes" element={<NotesPage />} />
+          <Route path="/quiz" element={<QuizPage />} />
+          <Route path="/quiz/:slug" element={<QuizSessionPage />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />

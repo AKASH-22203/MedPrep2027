@@ -1,0 +1,83 @@
+{
+  "subjects": [
+    { "id": "anatomy", "name": "Anatomy", "file": "questions/anatomy.json" },
+    {
+      "id": "physiology",
+      "name": "Physiology",
+      "file": "questions/physiology.json"
+    },
+    {
+      "id": "biochemistry",
+      "name": "Biochemistry",
+      "file": "questions/biochemistry.json"
+    },
+    {
+      "id": "pathology",
+      "name": "Pathology",
+      "file": "questions/pathology.json"
+    },
+    {
+      "id": "pharmacology",
+      "name": "Pharmacology",
+      "file": "questions/pharmacology.json"
+    },
+    {
+      "id": "microbiology",
+      "name": "Microbiology",
+      "file": "questions/microbiology.json"
+    },
+    {
+      "id": "forensic-medicine",
+      "name": "Forensic Medicine",
+      "file": "questions/forensic-medicine.json"
+    },
+    {
+      "id": "community-medicine",
+      "name": "Community Medicine",
+      "file": "questions/community-medicine.json"
+    },
+    { "id": "ent", "name": "ENT", "file": "questions/ent.json" },
+    {
+      "id": "ophthalmology",
+      "name": "Ophthalmology",
+      "file": "questions/ophthalmology.json"
+    },
+    { "id": "medicine", "name": "Medicine", "file": "questions/medicine.json" },
+    { "id": "surgery", "name": "Surgery", "file": "questions/surgery.json" },
+    {
+      "id": "obstetrics-gynaecology",
+      "name": "Obstetrics & Gynaecology",
+      "file": "questions/obstetrics-gynaecology.json"
+    },
+    {
+      "id": "paediatrics",
+      "name": "Paediatrics",
+      "file": "questions/paediatrics.json"
+    },
+    {
+      "id": "orthopedics",
+      "name": "Orthopedics",
+      "file": "questions/orthopedics.json"
+    },
+    {
+      "id": "dermatology",
+      "name": "Dermatology",
+      "file": "questions/dermatology.json"
+    },
+    {
+      "id": "psychiatry",
+      "name": "Psychiatry",
+      "file": "questions/psychiatry.json"
+    },
+    {
+      "id": "radiology",
+      "name": "Radiology",
+      "file": "questions/radiology.json"
+    },
+    {
+      "id": "anesthesia",
+      "name": "Anesthesia",
+      "file": "questions/anesthesia.json"
+    }
+  ]
+}
